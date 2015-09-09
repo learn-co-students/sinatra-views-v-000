@@ -1,12 +1,5 @@
 # Sinatra Views
 
-## Outline
-
-1. We can use Sinatra to render html instead of plain text. For clarity, we write our html in seperate files. 
-2. By default, Sinatra uses a templating language called "erb," which we'll learn more about in the next lesson. 
-3. By default, Sinatra will look for certain file names in a directory called `views`
-4. Create different routes that each render a different view (each one with plain HTML)
-
 
 ## Objectives
 
@@ -57,8 +50,61 @@ Now, we just need to update our controller to render the `index.erb` file at the
 	end
 ``` 
 
-This tells Sinatra to render a file called `index.erb` inside of a directory called `views`. Save your files and refresh your preview to see your changes. Awesome, right?  
+This tells Sinatra to render a file called `index.erb` inside of a directory called `views`. Save your files and refresh your preview to see your changes. Awesome, right? 
 
-## Resources
+### Part 3: Multiple Routes with Multiple Views
 
-* 
+We can create as many routes and views as we want. Let's create a route called "/info" in our controller. 
+
+```ruby
+	get '/' do
+	  erb :index
+	end
+	
+	get "/info" do
+	  "Testing the info page"
+	end
+```
+
+With `shotgun` running, head to [http://localhost:9393/info](http://localhost:9393/info). You should see "Testing the info page" rendered there. This lets us know that our route is defined properly. Next, let's have this route render a separate file instead. Inside of the `views` directory, create a file called `info.erb`. Add whatever HTML code you like. 
+
+```erb
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Info Page</title>
+	</head>
+	<body>
+		<h1>Info Page</h1>
+		<p>This is the info page: here's some information about me!.</p>
+	</body>
+</html>
+
+```
+
+Finally, update our controller to render that file. 
+
+```ruby
+	get '/' do
+	  erb :index
+	end
+	
+	get "/info" do
+	  erb :info
+	end
+```
+
+It's important to note that the name of the file doens't have to match the name of the route. For example, if we wanted our "/info" route to render a file called `dogs.erb`, we could do so like this: 
+
+```ruby
+	get '/' do
+	  erb :index
+	end
+	
+	get "/info" do
+	  erb :dogs
+	end
+```
+
+By convention though, we keep our routes and our erb files named the same. This makes it easier to keep track of as our projects get bigger. 
+
