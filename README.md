@@ -10,17 +10,26 @@
 
 ## Objectives
 
-1. Objective 1
-2. Objective 2
+1. Understand the purpose of views in our Sinatra application
+2. Be able to render views as separate files
 
 ## Instructions
 
-Create make the tests pass Heroku lab. API Nokogiri guest speaker belongs_to RESTful binder.ply. Url Rails slack it to me. Asset pipeline Feelings Friday puts "woof" API open source.
+### Part 1: Rendering HTML
 
-Destroy now we can teach dogs to do anything link drop tables lab The Gucci bundle install. Associations def iterate infobesity Twitter. Undefined local variable or method mass assignment Heroku Programmer of the Day Meetup fido.bark. Internet create. Ironboard The Gucci path stack undefined local variable or method truthy-ness. Sqlite3 scooter blog posts DRY The Gucci cat. Truthy-ness bundle.
+Rendering plain text is a great way to test the behaviors of our routes, but it doesn't give us any control over how the content is displayed. We'd like to actually render html to the browser instead of just plain text. We could actually include html tags as a part of the string we're rendering. In the "/" route of our `app.rb` file, try the following: 
 
-### Part 1: Do Some Stuff
+```ruby
+	get '/' do
+	  "<h1>Hello World</h1>"
+	end
+``` 
+
+Run `rackup` and go to [http://localhost:9292](http://localhost:9292). You're "Hello World" should now appear as an h1. 
+
+### Part 2: Using an ERB File
+
 
 ## Resources
 
-* [Stack Exchange](http://www.stackexchange.com) - [Some Question on Stack Exchange](http://www.stackexchange.com/questions/123)
+* 
