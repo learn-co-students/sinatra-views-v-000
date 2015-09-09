@@ -25,10 +25,39 @@ Rendering plain text is a great way to test the behaviors of our routes, but it 
 	end
 ``` 
 
-Run `rackup` and go to [http://localhost:9292](http://localhost:9292). You're "Hello World" should now appear as an h1. 
+Run `shotgun` and go to [http://localhost:9393](http://localhost:9393). You're "Hello World" should now appear as an h1. 
 
 ### Part 2: Using an ERB File
 
+You can imagine that writing HTML this way would get very messy, very quickly. Luckily, most web frameworks include a templating engine that allows us to render HTML content from a differnet file. We call these files "views." Views represent what the user sees and make up the "V" of our "MVC". 
+
+By default, Sinatra uses a templating engine called ERB, or Embedded Ruby. We'll learn more about ERB in the next lesson. For now, just know that our view files will use the extension `.erb` and that we can write HTML code there just like a plain old `.html` file. Sinatra is also configured by default to look for our `.erb` files in a directory called `views`. 
+
+Create a new file called `index.erb` inside of the `views` directory. Add the following code into that file.
+
+```erb
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My First View!!</title>
+	</head>
+	<body>
+		<h1>Hello World</h1>
+		<p>This HTML code is inside of a '.erb' file in the views directory, where it belongs.</p>
+	</body>
+</html>
+
+```
+
+Now, we just need to update our controller to render the `index.erb` file at the "/" route. The syntax for this is as follows:
+
+```ruby
+	get '/' do
+	  erb :index
+	end
+``` 
+
+This tells Sinatra to render a file called `index.erb` inside of a directory called `views`. Save your files and refresh your preview to see your changes. Awesome, right?  
 
 ## Resources
 
