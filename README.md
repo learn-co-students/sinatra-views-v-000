@@ -108,3 +108,5 @@ It's important to note that the name of the file doesn't have to match the name 
 
 By convention though, we keep our routes and our erb files named the same. This makes it easier to keep track of as our projects get bigger. 
 
+
+<a href='https://learn.co/lessons/sinatra-views' data-visibility='hidden'>View this lesson on Learn.co</a>
