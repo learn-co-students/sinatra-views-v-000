@@ -5,13 +5,13 @@ source "https://rubygems.org"
 
 gem 'sinatra'
     gem 'rake'
-    gem 'thin'
+    gem 'thin', '~>1.6.3'
     gem 'shotgun'
     gem 'pry'
     gem 'require_all'
     
 group :test do
-      gem 'rspec'
+      gem 'rspec', '~>3.4.0'
       gem 'capybara'
       gem 'rack-test'
     end
