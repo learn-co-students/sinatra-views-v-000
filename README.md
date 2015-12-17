@@ -80,7 +80,7 @@ With `shotgun` running, head to [http://localhost:9393/info](http://localhost:93
 	</head>
 	<body>
 		<h1>Info Page</h1>
-		<p>This is the info page: here's some information about me!.</p>
+		<p>This is the info page: here's some information about me!</p>
 	</body>
 </html>
 
