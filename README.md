@@ -101,11 +101,11 @@ It's important to note that the name of the file doesn't have to match the name 
 
 ```ruby
 	get '/' do
-	  erb :index
+	  erb: index
 	end
 	
 	get "/info" do
-	  erb :dogs
+	  erb: dogs
 	end
 ```
 
