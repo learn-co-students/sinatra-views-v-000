@@ -15,4 +15,15 @@ class App < Sinatra::Base
 	end
 
 
-end
+# end
+# =======
+#   erb :index
+#   end
+
+# 	get "/info" do
+# 		erb :info
+# 	end
+	
+	
+end 
+# >>>>>>> 45d0158a8497990c8088dcfa7383c890b64c2507
