@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Goodbye</title>
+    </head>
+    <body>
+        <% name = "Joe" %>
+        <h1>Goodbye <%= name %></h1>
+    </body>
+</html>
