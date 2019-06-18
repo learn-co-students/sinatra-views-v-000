@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First View!!</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <p>This HTML code is inside of a '.erb' file in the views directory, where it belongs.</p>
+    
+    <!-- Everything below here is from the "Using ERB" lesson. -->
+    <h1><%= "I love " + "Ruby!!" %></h1>
+    <%= 1 + 1 %>
+    
+    <% if 1 == 2 %>
+      <p>1 equals 2.</p>
+    <% else %>
+      <p>1 does not equal 2.</p>
+    <% end %>
+    
+    <ul>
+      <% squares = [1, 4, 9, 16] %>
+      <% squares.each do |square| %>
+        <li><%= square %></li>
+      <% end %>
+    </ul>
+    
+    <% wall_posts = ["First post!", "Second post!", "Hello, it's your mother. Why don't you ever call me?"] %> <!-- Interesting. If I leave off that %> tag, that displays the ENTIRE line of code by mistake! -->
+    <ul>
+      <% wall_posts.each do |post| %>
+        <li><%= post %></li> <!-- If I leave off that = sign, that displays blank list items (but still shows the bullet points). Also, this comment gets repeated!-->
+      <% end %>
+    </ul>
+  </body>
+</html>
