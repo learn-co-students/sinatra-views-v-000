@@ -70,7 +70,7 @@ We can create as many routes and views as we want. Let's create a route called "
 ```
 
 Run `shotgun` and go to [http://localhost:9393](http://localhost:9393) or the IP Address:PORT provided by the Learn IDE. Your "Hello World" text should now appear as an `<h1>`. Nice!
-With `shotgun` running, head to [http://localhost:9393/info](http://localhost:9393/info) . You should see "Testing the info page" rendered there. This lets us know that our route is defined properly. Next, let's have this route render a separate file instead. Inside of the `views` directory, create a file called `info.erb`. Add whatever HTML code you like.
+With `shotgun` running, head to [http://localhost:9393/info](http://localhost:9393/info) . You should see "Testing the info page" rendered there. This lets us know that our route is defined properly. Next, let's have this route render a separate file instead. Inside of the `views` directory, create a file called `info.erb`. 
 
 ```erb
 <!DOCTYPE html>
