@@ -69,7 +69,7 @@ We can create as many routes and views as we want. Let's create a route called "
 	end
 ```
 
-Run `shotgun` and go to [http://localhost:9393](http://localhost:9393) or the IP Address:PORT provided by the Learn IDE. Your "Hello World" text should now appear as an `<h1>`. Nice!
+
 With `shotgun` running, head to [http://localhost:9393/info](http://localhost:9393/info) . You should see "Testing the info page" rendered there. This lets us know that our route is defined properly. Next, let's have this route render a separate file instead. Inside of the `views` directory, create a file called `info.erb`. Add the following code into that file, and whatever else you like.
 
 ```erb
@@ -109,6 +109,6 @@ It's important to note that the name of the file doesn't have to match the name 
 	end
 ```
 
-By convention though, we keep our routes and our erb files named the same. This makes it easier to keep track of as our projects get bigger.
+By convention though, we keep our routes and our erb files named the same. This makes it easier to keep track as our projects get bigger.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/sinatra-views' title='Sinatra Views'>Sinatra Views</a> on Learn.co and start learning to code for free.</p>
